@@ -15,4 +15,5 @@ if [ -f "/etc/resolv.conf" ]; then
 fi
 if [ -f "/etc/systemd/resolve.conf" ]; then
     echo "DNS=8.8.8.8" >> /etc/systemd/resolve.conf
+    systemctl status systemd-resolved
 fi
